@@ -3,7 +3,7 @@ export default class Ball {
     this.x = x
     this.y = y
     this.xSpeed = 3
-    this.ySpeed = 1
+    this.ySpeed = 3
     this.radius = 6
   }
   draw (context) {
@@ -20,7 +20,6 @@ export default class Ball {
     var ballTop = this.y - 6
     var ballRight = this.x + 6
     var ballBottom = this.y + 6
-    console.log(ballRight)
 
       // ball hits top wall
     if (ballTop < 0) {
@@ -34,7 +33,7 @@ export default class Ball {
     }
       // point is scored
     if (this.x < 0 || this.x > 960) {
-      this.xSpeed = 1
+      this.xSpeed = 3
       this.ySpeed = 3
       this.x = 480
       this.y = 360
